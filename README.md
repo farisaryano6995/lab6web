@@ -179,12 +179,12 @@ Maka program yang saya buat sebagai berikut atau bisa dilihat di [hasil Code](pr
 
 ## Syntax program3 sebagai berikut :
 
-# ![GitHub Logo](tugas%203.PNG) <h2>
+# ![GitHub Logo](gambar/tugas%203.PNG) <h2>
 
 
 ## Hasil output program3 ketika runtime adalah sebagai berikut :
 
-# ![GitHub Logo](hasil3.PNG) <h2>
+# ![GitHub Logo](gambar/hasil3.PNG) <h2>
 
 
 
