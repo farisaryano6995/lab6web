@@ -225,7 +225,7 @@ integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxU
                   </div>
               </div>
 ```
-![Hasil](img/artikel.png)
+![Hasil](img/artikel1.png)
 
 6. selanjautnya menambahkan artikel widget menggunakan `card` pada bosstrap 
 
