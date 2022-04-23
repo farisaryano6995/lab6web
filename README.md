@@ -1,192 +1,315 @@
-# Pertemuan 7
-## Kondisi dan Perulangan
-***
+# Tugas Lab 6 Web
+## Profil
+|  | KETEᖇᗩᑎGᗩᑎ |
+| -------- | --- |
+| **Nama** | Faris Aryano Pirsada|
+| **NIM** | 312010371 |
+| **Kelas** | TI.20.A.2 |
+| **Mata Kuliah** | Pemrograman Web |
 
-## Tugas Melengkapi Pertemuan 7
-| Nama | kelas | Nim | Matkul |
-| -- | --- | ---- | ----------- |
-| faris aryano pirsada | TI.A2.20 | 312010371 | Bahasa Pemrograman |
-## Daftar Isi
-| No | ISI | Link | Source Code |
-| -- | --- | ---- | ----------- |
-| 1. | Latihan 1 | [penjelasan](#Latihan-1) | [codenye](latihan1.py) |
-| 2. | Latihan 2 | [penjelasan](#Latihan-2) | [codenye](latihan2.py) |
-| 3. | Praktikum 3 | [penjelasan](#Praktikum-3) | [codenye](program1.py) |
+## Praktikum 
+1. Persiapkan text editor misalnya VSCode.
+2. Buat folder baru dengan nama lab6_css_framework
+3. Buat file baru dokumen html
+4. Buat struktur dasar dari dokumen HTML.
+5. Buatlah layout web sederhana menggunakan css frameword (Twitter Bootsrtap).
+6. Lakukan validasi dokumen html dengan mengakses http://validator.w3.org
 
+## 1. Install Bosstrap 
+1. Kunjungi website resmi Bootstrap di [Booststrap.com](https://getbootstrap.com).
+2. Dwonload Bosstrap atau anda bisa memilih menggunakan source code yang sudah disediakan tanpa harus mendownload
+3. setelah anda sudah mendownload lalu ekstrak file masukan di dalam folder project anda lab6_css_framework 
+4. lalu buat file dengan nama `index.html`
+5. Lalu masukan struktur Kode html
 
-### Latihan 1 
-* Saya diberikan tugas untuk membuat program perulangan bersarang/bertingkat (nested for) yang menghasilkan output berikut
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Sederhana</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+* Tambahkan css bootstrap didalam tag `<head>`.
+```
+<!-- File bosstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+```
+* atau anda dapat mencopy paste stylesheet bosstrap dalam template.
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+```
+* Tambahkan js bootstrap di dalam tag `<body>` dipaling bawah sebelum penutup.
 
-![output 1](gambar/tugas%201.PNG)
-
-Maka program yang saya buat sebagai berikut atau bisa dilihat di [Source Code](latihan1.py)
-
-```python
-# helloow
-
-baris = 10
-kolom = baris
-
-for bar in range(baris):
-    for col in range(kolom):
-        tab = bar+col
-        print("{0:>5}".format(tab), end='')
-    print()
+```
+<!-- File Bosstrap JS-->
+<script src="js/bootstrap.min.js"></script>
 ```
 
-Penjelasan
-
-1. Pendeklarasian variable
-```python
-baris = 10
-kolom = baris
+* atau anda dapat mempaste JS yang sudah disediakan dalam tempalte bosstrap
+```
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 ```
 
-2. Untuk perulangan baris dan kolom menggunakan `nested for`
-```python
-for bar in range(baris):
-    for col in range(kolom):
-        tab = bar+col        
+* Template HTML5 Pada bossttrap
 ```
-3. Untuk menampikan hasil dari perulangan
-     * Agar terlihat rapih menggunakan `format string` rata ke kanan sebanyak 5 karakter
-     * Agar tidak membuat baris baru menggunakan `end=''` (baris)
-     * Penggunaan `print()` untuk membuat baris baru (kolom)
-```python
-  print("{0:>5}".format(tab), end='')
-print()    
-```
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-Maka program yang di hasil seperti berikut
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-![hasil ke1](gambar/hasil1.png)
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
 
+    <!-- Optional JavaScript; choose one of the two! -->
 
-### Latihan 2
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
-* Saya diberikan tugas untuk membuat program :
-     * Tampilkan n bilangan acak yang lebih kecil dari 0.5
-     * Nilai n diisi pada saat runtime
-     
-Seperti pada gambar berikut
-
-![output 2](gambar/tugas%202.PNG)
-
-Maka program yang saya buat sebagai berikut atau bisa dilihat di [hasil Code](latihan2.py)
-
-```python
-import random
-print(39*"=")
-print("Bilangan acak yang lebih kecil dari 0,5")
-print(39*"=")
-jum = int( input("Masukan nilai n : "))
-i = 0
-for i in range(jum):
-    i += 1
-    angkaDec = random.uniform(0, 0.5)
-    print("Data ke", i, " = ", angkaDec)
- 
- ```
-
-Penjelasan
-
-1. Mengimport module `random` untuk membuat bilangan acak
-```python
-import random
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
 ```
 
-2. Untuk menentukan jumlah input yang diinginkan dan dikonversi ke dalam bilangan bulat (integer) yang dimasukan ke variable `jum`
-```python
-jum = int( input("Masukan nilai n : "))
+## Langkah 2 Membuat Layout Sederhana menggunakan bosstrap
+
+1. Pertama anda membuat `index.html`
 ```
-
-3. Untuk pengulangan range yang diinputkan oleh variable `jum`
-```python
-for i in range(jum):
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Sederhana</title>
+</head>
+<body>
+    
+</body>
+</html>
 ```
-
-4. Untuk menampilkan urutan data sesuai jumlah inputan dengan hasil di bawah 0.5
-```python
-angkaDec = random.uniform(0, 0.5)
-    print("Data ke", i, " = ", angkaDec)
+2. Tambahkan kodingan navbar letakanlah di dalam `body`
 ```
-![tampil 2](gambar/hasil2.PNG)
+    <div class="container mt-5">
+        <div class="card shadow">
+            <h2 class="m-4" style="color: rgb(170, 170, 170);">Layout Sederhana</h2>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link my-container active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link my-container" href="#">Artikel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link my-container" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link my-container" href="#">Kontak</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+```
+![Hasil](img/nav.png)
+3. Lalu tambakan artikel berikutnya, cari di bosstrap yaitu jumbtron, pada jumbotron ini ada di bagian versi `4 bosstrap`
+```
+ <!--Kontent awal untuk sebuah informasi-->
+          <div class="jumbotron p-4 bg-light">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ab nobis doloribus earum sunt</p>
+            <p>illo quod natus assumenda, impedit deserunt officiis magnam velit nam provident dolor rerum commodi porro quam.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          </div>
+```
+![Hasil](img/jumbotron.png)
+4. lalu membuat halaman dengan menggunakan `card` template pada bosstrap
+```
+ <div class="row m-0 py-3">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body text-center">
+                                    <img src="https://dummyimage.com/120x120/f7b42e/fff.png" alt=""
+                                        class="rounded-circle mb-3">
+                                    <h4>Heading</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus!</p>
+                                    <a href="#" class="btn btn-secondary">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body text-center">
+                                    <img src="https://dummyimage.com/120x120/5ea1f2/fff.png" alt=""
+                                        class="rounded-circle mb-3">
+                                    <h4>Heading</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus!</p>
+                                    <a href="#" class="btn btn-secondary">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body text-center">
+                                    <img src="https://dummyimage.com/120x120/65f05d/fff.png" alt=""
+                                        class="rounded-circle mb-3">
+                                    <h4>Heading</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus!</p>
+                                    <a href="#" class="btn btn-secondary">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+```
+![Hasil](img/card1.png)
+5. Menambahkan konten artikel 
+```
+  <div class="artikel p-3 mt-4">
+                      <div class="artikel">
+                          <h3 class="text-dark mb-3">First Featurette Heading</h3>
+                          <div class="row">
+                              <div class="col-md-3"> 
+                                  <img src="https://dummyimage.com/150x150/757575/fff.png" class="rounded mb-3" alt="">
+                              </div>
+                              <div class="col-md-9">
+                                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo atque ratione pariatur iusto. Explicabo odit corrupti illum. Numquam eligendi consectetur non odio ex maxime voluptates inventore vero voluptatem, repellat possimus. Iusto laudantium necessitatibus vero quis quo, quibusdam error saepe? Quisquam animi perspiciatis commodi rerum ducimus aliquid iusto eveniet aperiam blanditiis.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <hr class="my-4">
+                  <div class="artikel p-3 my-4">
+                      <div class="artikel">
+                          <h3 class="text-dark mb-3">First Featurette Heading</h3>
+                          <div class="row">
+                              <div class="col-md-9">
+                                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo atque ratione pariatur iusto. Explicabo odit corrupti illum. Numquam eligendi consectetur non odio ex maxime voluptates inventore vero voluptatem, repellat possimus. Iusto laudantium necessitatibus vero quis quo, quibusdam error saepe? Quisquam animi perspiciatis commodi rerum ducimus aliquid iusto eveniet aperiam blanditiis.</p>
+                              </div>
+                              <div class="col-md-3">
+                                  <img src="https://dummyimage.com/150x150/757575/fff.png" class="rounded" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+```
+![Hasil](img/artikel.png)
+
+6. selanjautnya menambahkan artikel widget menggunakan `card` pada bosstrap 
+
+```
+<div class="col-md-3">
+                  <div class="card border border-primary mb-3">
+                      <div class="card-header bg-primary text-white fw-bold">
+                          Widget Header
+                      </div>
+                      <ul class="list-group">
+                          <li class="list-group-item"><a href="#">widget Link</a></li>
+                          <li class="list-group-item"><a href="#">widget Link</a></li>
+                          <li class="list-group-item"><a href="#">widget Link</a></li>
+                          <li class="list-group-item"><a href="#">widget Link</a></li>
+                      </ul>
+                  </div>
+                  <div class="card border border-primary ">
+                      <div class="card-header bg-primary text-white fw-bold">
+                          Widget Header
+                      </div>
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, vero sapiente.
+                              Nesciunt minus, praesentium non molestiae deleniti laboriosam inventore numquam.
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+```
+![Hasil](img/card2.png)
+7. Lalu yang terakhir membuat bagian `footer` untuk ditaruh di paling bawah layout 
+```
+ <footer class="bg-dark text-white p-3 text-center">&copy; 2022 - Universitas Pelita Bangsa @ Muhammad Rizky Abdillah</footer>
+```
+![Hasil](img/footer.png)
+
+8. setelah itu kita kasih style baru lalu kita buat dengan file `style.css`
+```
+@import
+url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import
+url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+body {
+ line-height:1;
+ font-size:100%;
+ font-family:'Open Sans', sans-serif;
+ color:#5a5a5a;
+}
+.active, .nav-link:hover {
+    background-color: rgb(119, 178, 237);
+}
+
+nav, .container-fluid {
+    padding: 5px;
+    margin: 0px;
+}
+.list-group li {
+    border-bottom: 1px solid #eee;
+}
+.list-group li a {
+   padding: 10px 20px;
+   color: #333;
+   display: block;
+   text-decoration: none; 
+}
+.list-group li:hover a {
+    background-color: rgb(218, 212, 212) ;
+}
+
+.list-group p {
+    padding: 15px;
+    line-height: 25px;
+}
+/* widget box decorasi*/
+.card-header .title {
+    padding: 10px 16px;
+    background-color: rgb(104, 104, 216);
+    color: white;
+}
+.list-group ul {
+    list-style-type: none;
+}
 
 
 
-
- *Soal latihan3.py :
-
-
-  *Membuat program sederhana dengan perulangan :
-
- Seorang pengusaha menginvestasikan uangnya untuk memulai usahanya 
-dengan modal awal 100 juta,
-
-- Pada bulan pertama dan kedua belum mendapatkan laba.
-
-- Pada bulan ketiga baru mulia mendapatkan laba sebesar 1%
-
-- Pada bulan ke lima pendapatan meningkat 5%
-
-- Pada bulan ke delapan mengalami penurunan keuntungan sebesar 2%, 
-sehingga laba menjadi 3%.
-
-- Hitung total keuntungan selama 8 bulan berjalan usahanya.
-
- *ALGORITMA menghitung keuntungan selama 8 bulan berjalannya usaha.
-
-1. Mulai
-
-2. Mencetak latihan1
-
-3. Mencetak "Program menghitung laba dengan modal awal 100 juta"
-
-4. Membuat Note
-
-5. Mencetak Bulan pertama dan kedua = 0%
-
-6. Mencetak bulan ke 3 = 1%
-
-7. Mencetak bulan ke 5 = 5%
-
-8. Mencetak bulan ke 8 = 2%
-
-9. integer a = 100.000.000( modal awal)
-
-10. Menggunakan fungsi looping for pada nilai x 1-9 untuk menampilkan 
-bulan 1 sampai bulan 8.
-
-11. Menggunakan fungsi if, untuk menghitung laba bulan 1 sampai 8
-
-12. bulan pertama dan kedua laba adalah 0
-
-13. bulan ke 3 dan ke 4 mendapat laba 1% sehingga modal di kali 1% = 
-keuntungan
-
-14. bulan ke 5 mendapatkan laba 5%, sehingga modal dikali 5% = 
-keuntungan
-
-15. Bulan ke 8 mmendapatkan laba 2% sehingga keuntungan menurun dari 
-bulan sebelumnya, modal dikali 2% = keuntungan.
-
-16. Menghitung jumlah total laba dengan menjumlah keuntungan dari bulan 
-ke 1 sampai bulan 8, hasilnya adalah total keuntungan yang didapat.
-
-17. Selesai
-
-Maka program yang saya buat sebagai berikut atau bisa dilihat di [hasil Code](program1.py)
-
-## Syntax program3 sebagai berikut :
-
-# ![GitHub Logo](gambar/tugas%203.PNG) <h2>
-
-
-## Hasil output program3 ketika runtime adalah sebagai berikut :
-
-# ![GitHub Logo](gambar/hasil3.PNG) <h2>
-
-
-
-
-**TERIMAKASIH
+```
